@@ -1,0 +1,163 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:100);
+@import url(https://fonts.googleapis.com/css?family=Slabo+27px);
+
+body{
+  height: 100%;
+}
+img.bg {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+
+  /* Set up positioning */
+  z-index: -10;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+  img.bg {
+    left: 50%;
+    margin-left: -512px;   /* 50% */
+  }
+}
+.nopadding{
+  padding: 0;
+}
+.headbg{
+  background: linear-gradient(rgba(52,73,94,0.8), rgba(52,73,94,0.8)),url(/css/images/computer.jpg) no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100%;
+  min-width: 1024px;
+  width: 100%;
+  height: 100vh;
+  z-index: -10;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#head{
+  border-bottom: ridge 6px;
+  padding-top: 6%;
+  padding-bottom: 2%;
+  margin-left: 20%;
+  margin-right: 20%;
+  text-align: center;
+  font-family: "Raleway","Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: #f7f7f7;
+  text-transform: uppercase;
+  /*font-size: 56px;*/
+  font-size: 30px;
+  letter-spacing: 4px;
+  line-height: 80px;
+}
+#minihead{
+  margin-bottom: 15px;
+  text-align: center;
+  font-family: "Raleway","Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: #f7f7f7;
+  font-size: 26px;
+  color: #fff;
+}
+#navHeading{
+  font-size: 30px;
+  color: #fff;
+  text-shadow: -1px 1px 1px black;
+  font-family: 'Slabo 27px', serif;
+}
+.navTab{
+  cursor: pointer;
+  color: #fff;
+  font-size: 15px;
+}
+.navTab:hover{
+  color: #c9c9c9;
+}
+.project{
+  background-image: url('/css/images/coding.jpg');
+  background-size: cover;
+  height: 500px;
+  position: relative;
+  bottom: 282px;
+}
+.projectTxt{
+  color: #fff;
+  font-weight: 900;
+  text-align: center;
+  /*font-size: 80px;*/
+  font-size: 30px;
+  padding-top: 24%;
+  text-shadow: -2px 2px 4px black;
+}
+.resume{
+  width: 100%;
+  height: 1250px;
+}
+@media (max-width: 850px) {
+  .projectTxt{
+    font-size: 65px;
+    padding-top: 55%;
+  }
+  .resume{
+    height: 1000px;
+  }
+}
+.contactPicBorder{
+  width: 250px;
+  height: 250px;
+  background-color: rgba(91,143,150, 0.3);
+  border-radius: 120px;
+}
+.imgtxt{
+  color: #4ba2af;
+  font-size: 35px;
+}
+.contactText{
+  font-size: 20px;
+  color: #fff;
+}
+/*Social Icons*/
+section #services {
+  text-align: center;
+  transform: translatez(0);
+}
+section #services li {
+  width: 120px;
+  height: 140px;
+  display: inline-block;
+  margin: 20px;
+  list-style: none;
+  color: #74d4b3; 
+}
+section #services li div {
+  width: 120px;
+  height: 120px;
+  color: #fff;
+  font-size: 3.4em;
+  text-align: center;
+  line-height: 120px;
+  background-color: rgba(60,194,255, .6);
+  transition: all 0.5s ease;
+}
+section #services li div:hover {
+  transform: rotate(360deg);
+  border-radius: 100px;
+}
+section #services li span {
+  font-weight: 600;
+  width: 120px;
+  height: 20px;
+  display: block;
+  padding: 15px 0px;
+  color: #fff;
+  font-family: "Raleway","Helvetica Neue",Helvetica,Arial,sans-serif;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  text-align: center;
+}

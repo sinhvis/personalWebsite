@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<title>Vishal</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/site.css">
+	<link href='https://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/css/animate.css">
+</head>
+<body class="animated slideInDown">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12" style="padding-top:25px;z-index:100">
+				<div class="col-md-3">
+
+					<span id='navHeading'><span style='font-size:36px'> Vishal Sinha</span></span>
+				</div>
+				
+				<div style="padding-top:15px">
+					<div class="col-md-4">&nbsp</div>
+					<div class="col-md-1">
+						<a ui-sref='Home' class='navTab'>Home</a>
+					</div>
+					<div class="col-md-1">
+						<a ui-sref='Projects' class='navTab'>Projects</a>
+					</div>
+					<div class="col-md-1">
+						<a ui-sref='Resume' class='navTab'>Resume</a>
+					</div>
+					<div class="col-md-1">
+						<a ui-sref='Contact' class='navTab'>Contact Me</a>
+					</div>
+				</div>
+				
+			</div>
+			
+		</div>
+	</div>
+	<ui-view></ui-view>
+	<!-- Ext Libs -->
+	<script src="angular/angular.min.js"></script>
+	<script src="angular-ui-router/release/angular-ui-router.min.js"></script>
+	<!-- Global Src -->
+	<script src="/javascript/app.js"></script>
+	<!-- Factories -->
+	<script src="/javascript/services/HomeFactory.js"></script>
+	<!-- Controllers -->
+	<script src="/javascript/controllers/HomeController.js"></script>
+</body>
+</html>
