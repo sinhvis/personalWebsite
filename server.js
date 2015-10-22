@@ -4,6 +4,27 @@ var bodyParser = require('body-parser');
 var app = express();
 var port = process.env.PORT || 3000;
 
+function checkMod(modName){
+	try{
+		require.resolve(modName);
+		return true;
+	} catch (e){}
+	return false;
+}
+
+
+
+if(checkMod('./env')){
+
+	var env = require('./env');
+} else {
+	var env = {}
+}
+
+var email = process.env.EMAIL_PASS || env.EMAIL_PASS;
+
+console.log(email);
+
 
 app.set('views', path.join(__dirname, 'views'));
 //set the view engine that will render HTML from the server to the client
