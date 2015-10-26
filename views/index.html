@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="/css/animate.css">
 </head>
 <body class="animated slideInDown">
-	<div class="container-fluid">
+	<div class="container-fluid" id="header">
 		<div class="row">
 			<div class="col-md-12" style="padding-top:25px;z-index:100">
 				<div class="col-md-3">
@@ -31,7 +31,7 @@
 						<a ui-sref='Resume' class='navTab'>Resume</a>
 					</div>
 					<div class="col-md-1">
-						<a ui-sref='Contact' class='navTab'>Contact Me</a>
+						<a ui-sref='Contact' class='navTab'>Contact&nbsp;Me</a>
 					</div>
 				</div>
 				
@@ -49,5 +49,26 @@
 	<script src="/javascript/services/HomeFactory.js"></script>
 	<!-- Controllers -->
 	<script src="/javascript/controllers/HomeController.js"></script>
+	<script language="javascript" type="text/javascript">
+		function resizeIframe(obj) {
+			var heightOfEntireWindow = isNaN(window.innerHeight) ? window.clientHeight : window.innerHeight ;
+			var heightOfHeader = document.getElementById('header').offsetHeight ;
+			
+			// Subtract 6 to make sure no extra scrollbar.
+			var iFrameHeight = heightOfEntireWindow - heightOfHeader - 6 ;
+			// obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+			obj.style.height = iFrameHeight + 'px';
+			obj.style.width = "100%" ;
+		}
+		window.onresize = function(event) {
+			var iframe = document.getElementById('iframe');
+			if (iframe) {
+				console.log('reziging iframe')
+				resizeIframe(iframe);
+			} else {
+				console.log('no ifrmae')
+			}
+		}
+	</script>
 </body>
 </html>

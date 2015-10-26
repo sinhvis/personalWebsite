@@ -15,6 +15,9 @@
 		}).state('Resume',{
 			url: '/resume',
 			templateUrl: 'templates/resume.html',
+		}).state('Resume2',{
+			url: '/resume2',
+			templateUrl: 'templates/resume2.html',
 		}).state('Contact',{
 			url: '/contact',
 			templateUrl: 'templates/contact.html',
